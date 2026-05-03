@@ -17,7 +17,7 @@ A neural network–powered chatbot that answers questions about Sri Lanka's nati
 | Yala | Highest leopard density in the world |
 | Udawalawe | Year-round large elephant herds |
 | Wilpattu | Leopards near natural lakes (villus) |
-| Minneriya | The Gathering — up to 300 elephants (Aug–Oct) |
+| Minneriya | The Gathering, up to 300 elephants (Aug–Oct) |
 | Horton Plains | World's End cliff, endemic highland birds |
 | Bundala | Flamingos and migratory wetland birds |
 | Sinharaja | UNESCO rainforest, nearly all endemic bird species |
@@ -49,7 +49,7 @@ Wildlife Chatbot/
 ### Requirements
 
 - Python 3.11
-- Windows (for `dependencies.bat`) — or install manually on other platforms
+- Windows (for `dependencies.bat`) or install manually on other platforms
 
 ### 1. Install dependencies
 
