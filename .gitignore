@@ -1,0 +1,22 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Trained model artifacts (regenerate with training script)
+models/*.h5
+models/*.pkl
+
+# Runtime data
+data/feedback_log.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

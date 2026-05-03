@@ -1,0 +1,766 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "Hello",
+                "Hey",
+                "Good morning",
+                "Good evening",
+                "Hey there",
+                "Hello there"
+            ],
+            "responses": [
+                "Hello! Welcome to the Sri Lanka Wildlife Guide!",
+                "Hi there! I can help you explore Sri Lanka's national parks and wildlife.",
+                "Hey! Welcome! Ask me anything about Sri Lanka's national parks."
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "Goodbye",
+                "See you",
+                "See you later",
+                "Take care",
+                "That's all",
+                "Exit",
+                "Quit",
+                "I'm done",
+                "Farewell"
+            ],
+            "responses": [
+                "See you!",
+                "Have a nice day!",
+                "Bye! Come back again soon.",
+                "Goodbye! Hope you enjoy your wildlife adventure in Sri Lanka!"
+            ]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That was helpful",
+                "Cheers",
+                "Thanks a lot",
+                "Thank you so much",
+                "That helped",
+                "Awesome thanks",
+                "Great thanks",
+                "Much appreciated"
+            ],
+            "responses": [
+                "Glad to help you!",
+                "You're welcome! Feel free to ask anything else.",
+                "Happy to help! Any other questions about Sri Lanka's wildlife?"
+            ]
+        },
+        {
+            "tag": "about",
+            "patterns": [
+                "What are you",
+                "What can you do",
+                "Who are you",
+                "What is this",
+                "Tell me about yourself",
+                "What do you know",
+                "How can you help me",
+                "What is this chatbot about"
+            ],
+            "responses": [
+                "I am the Sri Lanka Wildlife Guide chatbot! I can help you with information about national parks, wildlife, safari tips, entry tickets, best times to visit, and more.",
+                "I'm a wildlife guide chatbot for Sri Lanka. Ask me about Yala, Udawalawe, Wilpattu, Minneriya, Horton Plains, Bundala, or Sinharaja!"
+            ]
+        },
+        {
+            "tag": "help",
+            "patterns": [
+                "Help",
+                "What can I ask",
+                "Give me options",
+                "What topics do you cover",
+                "What do you know about",
+                "Guide me",
+                "I don't know what to ask",
+                "What should I ask"
+            ],
+            "responses": [
+                "You can ask me about: animals in each park, how to get there, entry ticket prices, best time to visit, safari activities, and general wildlife tips!",
+                "Try asking things like: 'What animals are in Yala?', 'How do I get to Udawalawe?', 'When is the best time to visit Wilpattu?', or 'What should I bring on a safari?'"
+            ]
+        },
+        {
+            "tag": "yala_animals",
+            "patterns": [
+                "What animals are in Yala",
+                "Which wildlife can I see in Yala",
+                "Tell me about Yala animals",
+                "What can I spot in Yala National Park",
+                "Yala wildlife",
+                "animals in yala",
+                "what lives in yala",
+                "yala leopard",
+                "can I see leopards in Yala",
+                "Yala famous animals"
+            ],
+            "responses": [
+                "Yala National Park has the highest density of leopards in the world! You can also spot elephants, sloth bears, crocodiles, water buffalos, spotted deer, and over 200 bird species including peacocks.",
+                "Yala is famous for its leopards, elephants, sloth bears, and crocodiles. It is one of the best places in Asia to see a leopard in the wild."
+            ]
+        },
+        {
+            "tag": "yala_location",
+            "patterns": [
+                "Where is Yala National Park",
+                "How do I get to Yala",
+                "Yala location",
+                "How far is Yala from Colombo",
+                "Which district is Yala in",
+                "directions to Yala",
+                "how to reach Yala",
+                "Yala park address"
+            ],
+            "responses": [
+                "Yala National Park is located in the southeastern corner of Sri Lanka, in the Hambantota and Monaragala districts. It is about 300 km from Colombo, roughly a 5 to 6 hour drive.",
+                "Yala is in southeast Sri Lanka near Tissamaharama town. From Colombo take the Southern Expressway to Hambantota, then head towards Tissamaharama. The park entrance is at Palatupana."
+            ]
+        },
+        {
+            "tag": "yala_tickets",
+            "patterns": [
+                "How much is the entry fee for Yala",
+                "Yala ticket price",
+                "Yala entrance fee",
+                "How much does Yala cost",
+                "Yala safari cost",
+                "Yala park fees",
+                "price to enter Yala",
+                "how much to visit Yala"
+            ],
+            "responses": [
+                "Yala National Park entry fees are approximately USD 15 per person for foreign visitors, plus a vehicle charge and a tracker fee. Safari jeep hire costs around LKR 6000 to 10000 depending on the season.",
+                "Entry to Yala costs around USD 15 for foreigners and LKR 60 for locals. You will also need to pay for a jeep hire and a mandatory wildlife tracker. Prices may vary so check the Department of Wildlife Conservation website for the latest fees."
+            ]
+        },
+        {
+            "tag": "yala_best_time",
+            "patterns": [
+                "When is the best time to visit Yala",
+                "Best season for Yala",
+                "When should I go to Yala",
+                "Yala dry season",
+                "Yala weather",
+                "when to visit Yala",
+                "what months is Yala open",
+                "Yala peak season"
+            ],
+            "responses": [
+                "The best time to visit Yala is from February to July during the dry season. Wildlife gathers around water holes making them easier to spot. Yala is partially closed from September to October for the monsoon season.",
+                "February to July is the ideal time for Yala. During the dry months water sources shrink, so animals especially leopards and elephants come to the remaining water holes more frequently."
+            ]
+        },
+        {
+            "tag": "yala_activities",
+            "patterns": [
+                "What can I do in Yala",
+                "Yala activities",
+                "Yala safari",
+                "Things to do in Yala",
+                "Yala jeep safari",
+                "bird watching Yala",
+                "camping in Yala",
+                "Yala experience"
+            ],
+            "responses": [
+                "In Yala you can enjoy jeep safaris, bird watching, and photography. Morning and evening safaris give the best wildlife sightings. There are also bungalows inside the park for overnight stays.",
+                "Yala offers half day and full day jeep safaris. Bird watching is excellent near the lagoons. You can also visit the ancient Sithulpawwa rock temple located inside the park."
+            ]
+        },
+        {
+            "tag": "udawalawe_animals",
+            "patterns": [
+                "What animals are in Udawalawe",
+                "Udawalawe wildlife",
+                "animals in Udawalawe",
+                "elephants in Udawalawe",
+                "can I see elephants in Udawalawe",
+                "Udawalawe famous animals",
+                "what can I spot in Udawalawe",
+                "Udawalawe elephant herd"
+            ],
+            "responses": [
+                "Udawalawe is the best park in Sri Lanka to see elephants. Large herds of wild elephants roam freely here. You can also spot water buffalos, crocodiles, sambar deer, and over 180 bird species.",
+                "Udawalawe National Park is famous for its large elephant population of over 500 elephants. You will almost certainly spot elephants here. Other wildlife includes jackals, mongoose, eagles, and painted storks."
+            ]
+        },
+        {
+            "tag": "udawalawe_location",
+            "patterns": [
+                "Where is Udawalawe National Park",
+                "How do I get to Udawalawe",
+                "Udawalawe location",
+                "How far is Udawalawe from Colombo",
+                "which district is Udawalawe",
+                "directions to Udawalawe",
+                "how to reach Udawalawe"
+            ],
+            "responses": [
+                "Udawalawe National Park is located about 165 km from Colombo in the Sabaragamuwa and Uva provinces. It is about a 3.5 to 4 hour drive from Colombo.",
+                "Udawalawe is in southern Sri Lanka near the Udawalawe reservoir. From Colombo take the A4 highway towards Ratnapura then continue to Udawalawe town. The drive takes about 4 hours."
+            ]
+        },
+        {
+            "tag": "udawalawe_tickets",
+            "patterns": [
+                "How much is the entry fee for Udawalawe",
+                "Udawalawe ticket price",
+                "Udawalawe entrance fee",
+                "How much does Udawalawe cost",
+                "Udawalawe safari cost",
+                "price to enter Udawalawe",
+                "how much to visit Udawalawe"
+            ],
+            "responses": [
+                "Udawalawe entry fees are approximately USD 15 per person for foreign visitors plus a vehicle charge. Jeep hire costs around LKR 5000 to 8000. Check the Department of Wildlife Conservation for the latest fees.",
+                "Entry to Udawalawe costs around USD 15 for foreigners. A jeep is mandatory and costs around LKR 5000 to 8000 depending on duration. A half day safari is enough to see elephants here."
+            ]
+        },
+        {
+            "tag": "udawalawe_best_time",
+            "patterns": [
+                "When is the best time to visit Udawalawe",
+                "Best season for Udawalawe",
+                "When should I go to Udawalawe",
+                "Udawalawe dry season",
+                "Udawalawe weather",
+                "when to visit Udawalawe",
+                "Udawalawe peak season"
+            ],
+            "responses": [
+                "Udawalawe can be visited year round but the best time is from June to September and December to March during the dry season when wildlife is more visible.",
+                "Unlike some other parks Udawalawe is open all year. The dry season from June to September is best as animals gather near the reservoir. Elephant sightings are almost guaranteed any time of year."
+            ]
+        },
+        {
+            "tag": "udawalawe_activities",
+            "patterns": [
+                "What can I do in Udawalawe",
+                "Udawalawe activities",
+                "Udawalawe safari",
+                "Things to do in Udawalawe",
+                "bird watching Udawalawe",
+                "Udawalawe elephant transit home",
+                "elephant orphanage Udawalawe"
+            ],
+            "responses": [
+                "Udawalawe offers jeep safaris, bird watching near the reservoir, and photography. Nearby is the Udawalawe Elephant Transit Home where orphaned baby elephants are cared for before being released into the wild.",
+                "The main activity is jeep safari to see the elephant herds. The Elephant Transit Home just outside the park is a must visit where you can watch baby elephants being fed at scheduled times."
+            ]
+        },
+        {
+            "tag": "wilpattu_animals",
+            "patterns": [
+                "What animals are in Wilpattu",
+                "Wilpattu wildlife",
+                "animals in Wilpattu",
+                "leopards in Wilpattu",
+                "can I see leopards in Wilpattu",
+                "Wilpattu famous animals",
+                "what can I spot in Wilpattu",
+                "Wilpattu bear"
+            ],
+            "responses": [
+                "Wilpattu is famous for its leopards which are often spotted near the natural lakes called villus. You can also see elephants, sloth bears, spotted deer, sambar, crocodiles, and many bird species.",
+                "Wilpattu National Park has healthy populations of leopards and sloth bears. The unique villus or natural lakes attract a wide variety of wildlife. Elephants, water buffalos, and jackals are also commonly spotted."
+            ]
+        },
+        {
+            "tag": "wilpattu_location",
+            "patterns": [
+                "Where is Wilpattu National Park",
+                "How do I get to Wilpattu",
+                "Wilpattu location",
+                "How far is Wilpattu from Colombo",
+                "which district is Wilpattu",
+                "directions to Wilpattu",
+                "how to reach Wilpattu"
+            ],
+            "responses": [
+                "Wilpattu National Park is Sri Lanka's largest national park located on the northwest coast about 180 km north of Colombo in the North Western Province. It takes about 4 hours to drive from Colombo.",
+                "Wilpattu is near Puttalam in northwestern Sri Lanka. From Colombo take the A3 highway north towards Puttalam then follow signs to the Wilpattu entrance at Hunuwilagama."
+            ]
+        },
+        {
+            "tag": "wilpattu_tickets",
+            "patterns": [
+                "How much is the entry fee for Wilpattu",
+                "Wilpattu ticket price",
+                "Wilpattu entrance fee",
+                "How much does Wilpattu cost",
+                "Wilpattu safari cost",
+                "price to enter Wilpattu",
+                "how much to visit Wilpattu"
+            ],
+            "responses": [
+                "Wilpattu entry fees are approximately USD 15 per person for foreign visitors plus charges for the vehicle and tracker. Jeep hire costs around LKR 6000 to 9000.",
+                "Entry to Wilpattu costs around USD 15 for foreigners. Since the park is large a full day safari is recommended. Jeep hire runs about LKR 6000 to 9000. Check the Department of Wildlife Conservation for current rates."
+            ]
+        },
+        {
+            "tag": "wilpattu_best_time",
+            "patterns": [
+                "When is the best time to visit Wilpattu",
+                "Best season for Wilpattu",
+                "When should I go to Wilpattu",
+                "Wilpattu dry season",
+                "Wilpattu weather",
+                "when to visit Wilpattu",
+                "Wilpattu peak season"
+            ],
+            "responses": [
+                "The best time to visit Wilpattu is from February to October during the dry season. The park may be partially closed during the northeast monsoon from November to January.",
+                "February to October is ideal for Wilpattu. During dry months the villus or natural lakes become important water sources drawing leopards, bears, and deer into the open."
+            ]
+        },
+        {
+            "tag": "wilpattu_activities",
+            "patterns": [
+                "What can I do in Wilpattu",
+                "Wilpattu activities",
+                "Wilpattu safari",
+                "Things to do in Wilpattu",
+                "bird watching Wilpattu",
+                "camping Wilpattu",
+                "Wilpattu experience"
+            ],
+            "responses": [
+                "Wilpattu offers jeep safaris, bird watching, and overnight camping at bungalows inside the park. The park is less crowded than Yala making it a more peaceful wildlife experience.",
+                "Activities in Wilpattu include morning and evening jeep safaris and photography around the villus. Overnight bungalows are available inside the park for a true jungle experience. Leopard sightings are a highlight."
+            ]
+        },
+        {
+            "tag": "minneriya_animals",
+            "patterns": [
+                "What animals are in Minneriya",
+                "Minneriya wildlife",
+                "animals in Minneriya",
+                "elephants in Minneriya",
+                "the gathering Minneriya",
+                "Minneriya famous animals",
+                "what can I spot in Minneriya",
+                "elephant gathering Sri Lanka"
+            ],
+            "responses": [
+                "Minneriya is world famous for the Gathering, one of the largest concentrations of wild Asian elephants on earth. From August to October hundreds of elephants gather at the Minneriya tank. Sambar deer, toque macaques, and many birds are also found here.",
+                "The main attraction of Minneriya is the Gathering where up to 300 or more wild elephants congregate at the ancient Minneriya reservoir. You can also see leopards, deer, and large flocks of painted storks and cormorants."
+            ]
+        },
+        {
+            "tag": "minneriya_location",
+            "patterns": [
+                "Where is Minneriya National Park",
+                "How do I get to Minneriya",
+                "Minneriya location",
+                "How far is Minneriya from Colombo",
+                "which district is Minneriya",
+                "directions to Minneriya",
+                "how to reach Minneriya"
+            ],
+            "responses": [
+                "Minneriya National Park is located in the North Central Province about 180 km from Colombo near the town of Habarana. It takes about 4 hours to drive from Colombo.",
+                "Minneriya is in the Cultural Triangle area near Habarana in central Sri Lanka. From Colombo take the A6 highway towards Dambulla and Habarana. The park entrance is close to Habarana town."
+            ]
+        },
+        {
+            "tag": "minneriya_tickets",
+            "patterns": [
+                "How much is the entry fee for Minneriya",
+                "Minneriya ticket price",
+                "Minneriya entrance fee",
+                "How much does Minneriya cost",
+                "Minneriya safari cost",
+                "price to enter Minneriya",
+                "how much to visit Minneriya"
+            ],
+            "responses": [
+                "Minneriya entry fees are approximately USD 15 per person for foreign visitors plus vehicle and tracker fees. Jeep hire from Habarana costs around LKR 5000 to 8000.",
+                "Entry to Minneriya is around USD 15 for foreigners. Jeep safaris can be arranged from Habarana town. During the Gathering season prices may be slightly higher due to demand."
+            ]
+        },
+        {
+            "tag": "minneriya_best_time",
+            "patterns": [
+                "When is the best time to visit Minneriya",
+                "Best season for Minneriya",
+                "When should I go to Minneriya",
+                "Minneriya gathering season",
+                "when is the elephant gathering",
+                "when to visit Minneriya",
+                "Minneriya peak season"
+            ],
+            "responses": [
+                "The best time to visit Minneriya is from August to October when the famous Gathering takes place. As the dry season reduces the water in the reservoir hundreds of elephants converge making it one of the greatest wildlife spectacles in Asia.",
+                "August to October is the peak season for Minneriya due to the Gathering. If you visit outside this period you can still see elephants and other wildlife but in smaller numbers. The park is generally open year round."
+            ]
+        },
+        {
+            "tag": "minneriya_activities",
+            "patterns": [
+                "What can I do in Minneriya",
+                "Minneriya activities",
+                "Minneriya safari",
+                "Things to do in Minneriya",
+                "bird watching Minneriya",
+                "Minneriya experience",
+                "Minneriya jeep safari"
+            ],
+            "responses": [
+                "The main activity in Minneriya is the jeep safari to witness the elephant Gathering. Evening safaris are the best time to see the large herds come to the reservoir. Bird watching near the tank is also excellent.",
+                "Minneriya offers jeep safaris and bird watching. The evening Gathering safari is a must do experience. Minneriya can also be combined with nearby Kaudulla National Park as part of a combined safari on the same day."
+            ]
+        },
+        {
+            "tag": "horton_animals",
+            "patterns": [
+                "What animals are in Horton Plains",
+                "Horton Plains wildlife",
+                "animals in Horton Plains",
+                "Horton Plains famous animals",
+                "what can I see in Horton Plains",
+                "sambar deer Horton Plains",
+                "leopard Horton Plains",
+                "birds Horton Plains"
+            ],
+            "responses": [
+                "Horton Plains is home to sambar deer, purple faced langur monkeys, fishing cats, and leopards. The park is also one of the best places for bird watching with endemic species like the Sri Lanka whistling thrush and dull blue flycatcher.",
+                "Due to its highland location Horton Plains has unique wildlife including sambar deer that are commonly seen grazing near World's End. Leopards are present but rarely spotted. Over 24 endemic bird species have been recorded here."
+            ]
+        },
+        {
+            "tag": "horton_location",
+            "patterns": [
+                "Where is Horton Plains National Park",
+                "How do I get to Horton Plains",
+                "Horton Plains location",
+                "How far is Horton Plains from Colombo",
+                "which district is Horton Plains",
+                "directions to Horton Plains",
+                "how to reach Horton Plains",
+                "Horton Plains Nuwara Eliya"
+            ],
+            "responses": [
+                "Horton Plains National Park is located in the central highlands near Nuwara Eliya in the Nuwara Eliya district. It is about 200 km from Colombo and sits at an elevation of around 2100 to 2300 meters above sea level.",
+                "Horton Plains is near Ohiya in central Sri Lanka. From Colombo take the highway to Nuwara Eliya and then continue to Ohiya or Pattipola. The park entrance is at Ohiya."
+            ]
+        },
+        {
+            "tag": "horton_tickets",
+            "patterns": [
+                "How much is the entry fee for Horton Plains",
+                "Horton Plains ticket price",
+                "Horton Plains entrance fee",
+                "How much does Horton Plains cost",
+                "price to enter Horton Plains",
+                "how much to visit Horton Plains",
+                "Horton Plains cost"
+            ],
+            "responses": [
+                "Horton Plains entry fees are approximately USD 15 per person for foreign visitors. Unlike other parks you can walk the trails on foot here so there is no mandatory jeep hire.",
+                "Entry to Horton Plains is around USD 15 for foreigners. The main attraction is the hiking trail to World's End and Baker's Falls which you do on foot. The trail is about 9 km in total."
+            ]
+        },
+        {
+            "tag": "horton_best_time",
+            "patterns": [
+                "When is the best time to visit Horton Plains",
+                "Best season for Horton Plains",
+                "When should I go to Horton Plains",
+                "Horton Plains weather",
+                "when to visit Horton Plains",
+                "Horton Plains mist",
+                "Horton Plains peak season"
+            ],
+            "responses": [
+                "The best time to visit Horton Plains is early morning from January to April. Arriving before 7am gives you the best chance to see World's End before mist rolls in by late morning. The park can be cold and misty so bring warm clothing.",
+                "January to April is ideal. You should arrive at the park by 6 to 7am to enjoy clear views from World's End before the clouds build up. Avoid visiting during the southwest monsoon from May to August."
+            ]
+        },
+        {
+            "tag": "horton_activities",
+            "patterns": [
+                "What can I do in Horton Plains",
+                "Horton Plains activities",
+                "Things to do in Horton Plains",
+                "Horton Plains hiking",
+                "World's End Horton Plains",
+                "Bakers Falls Horton Plains",
+                "Horton Plains trekking",
+                "walk Horton Plains"
+            ],
+            "responses": [
+                "The main activity in Horton Plains is hiking the circular trail to World's End, a dramatic cliff with a drop of nearly 900 meters, and Baker's Falls, a beautiful waterfall. The full trail is about 9 km and takes 3 to 4 hours.",
+                "Horton Plains is unique because you explore it on foot. The trail takes you through cloud forest to World's End viewpoint and Baker's Falls. Bird watching along the trail is excellent especially in the early morning."
+            ]
+        },
+        {
+            "tag": "bundala_animals",
+            "patterns": [
+                "What animals are in Bundala",
+                "Bundala wildlife",
+                "animals in Bundala",
+                "birds in Bundala",
+                "flamingos Bundala",
+                "Bundala famous animals",
+                "what can I spot in Bundala",
+                "Bundala bird watching"
+            ],
+            "responses": [
+                "Bundala is a Ramsar designated wetland and a paradise for bird watchers. It is famous for its migratory birds including flamingos, pelicans, painted storks, and sandpipers. You can also see elephants, crocodiles, and turtles.",
+                "Over 200 bird species have been recorded in Bundala including large flocks of lesser flamingos that visit between November and March. Elephants also roam the park and sea turtles nest on the nearby beaches."
+            ]
+        },
+        {
+            "tag": "bundala_location",
+            "patterns": [
+                "Where is Bundala National Park",
+                "How do I get to Bundala",
+                "Bundala location",
+                "How far is Bundala from Colombo",
+                "which district is Bundala",
+                "directions to Bundala",
+                "how to reach Bundala"
+            ],
+            "responses": [
+                "Bundala National Park is located on the southern coast of Sri Lanka about 250 km from Colombo in the Hambantota district. It is about 20 km west of Hambantota town.",
+                "Bundala is in southern Sri Lanka along the coast between Hambantota and Tissamaharama. From Colombo take the Southern Expressway to Hambantota then head west along the coastal road."
+            ]
+        },
+        {
+            "tag": "bundala_tickets",
+            "patterns": [
+                "How much is the entry fee for Bundala",
+                "Bundala ticket price",
+                "Bundala entrance fee",
+                "How much does Bundala cost",
+                "Bundala safari cost",
+                "price to enter Bundala",
+                "how much to visit Bundala"
+            ],
+            "responses": [
+                "Bundala entry fees are approximately USD 10 to 15 per person for foreign visitors plus vehicle charges. It is generally cheaper than Yala and less crowded making it great value.",
+                "Entry to Bundala is around USD 10 to 15 for foreigners. A jeep safari is recommended to cover the lagoons and scrub areas. Check the Department of Wildlife Conservation for the latest fees."
+            ]
+        },
+        {
+            "tag": "bundala_best_time",
+            "patterns": [
+                "When is the best time to visit Bundala",
+                "Best season for Bundala",
+                "When should I go to Bundala",
+                "Bundala bird season",
+                "when to visit Bundala",
+                "Bundala flamingo season",
+                "Bundala peak season"
+            ],
+            "responses": [
+                "The best time to visit Bundala is from November to March when migratory birds arrive from Central Asia and the flamingos are present. This is also the dry season on the southern coast.",
+                "November to March is peak season for bird watching in Bundala. The flamingos and wading birds arrive during these months. Outside this period you can still see resident birds and elephants."
+            ]
+        },
+        {
+            "tag": "bundala_activities",
+            "patterns": [
+                "What can I do in Bundala",
+                "Bundala activities",
+                "Bundala safari",
+                "Things to do in Bundala",
+                "bird watching Bundala",
+                "Bundala experience",
+                "turtle watching Bundala"
+            ],
+            "responses": [
+                "Bundala is best known for bird watching by jeep safari along the lagoons and wetlands. Turtle watching on the nearby beaches is possible at night during nesting season. It is also close to Yala making it easy to combine both parks.",
+                "Activities in Bundala include bird watching jeep safaris, photography of the lagoons and flocks of flamingos, and elephant spotting. The park is quieter than Yala so you get a more peaceful experience."
+            ]
+        },
+        {
+            "tag": "sinharaja_animals",
+            "patterns": [
+                "What animals are in Sinharaja",
+                "Sinharaja wildlife",
+                "animals in Sinharaja",
+                "birds in Sinharaja",
+                "endemic birds Sinharaja",
+                "Sinharaja famous animals",
+                "what can I spot in Sinharaja",
+                "Sinharaja rainforest animals"
+            ],
+            "responses": [
+                "Sinharaja is a UNESCO World Heritage rainforest and one of the best places in the world to see endemic birds. Over 95% of Sri Lanka's endemic bird species are found here. You can also see purple faced langur monkeys, leopards, wild boar, and many reptiles and amphibians.",
+                "Sinharaja is famous for its mixed species bird flocks where several endemic bird species travel together through the forest. Green pit vipers, blue magpies, and Sri Lanka spurfowl are highlights. Leopards are present but very rarely seen."
+            ]
+        },
+        {
+            "tag": "sinharaja_location",
+            "patterns": [
+                "Where is Sinharaja Forest Reserve",
+                "How do I get to Sinharaja",
+                "Sinharaja location",
+                "How far is Sinharaja from Colombo",
+                "which district is Sinharaja",
+                "directions to Sinharaja",
+                "how to reach Sinharaja"
+            ],
+            "responses": [
+                "Sinharaja Forest Reserve is located in the southwestern lowlands of Sri Lanka about 150 km from Colombo in the Sabaragamuwa and Southern provinces. The main entrance is near Kudawa village.",
+                "Sinharaja is in southwestern Sri Lanka near Ratnapura. From Colombo take the A4 to Ratnapura then continue to Kalawana and Kudawa where the main forest entrance is located."
+            ]
+        },
+        {
+            "tag": "sinharaja_tickets",
+            "patterns": [
+                "How much is the entry fee for Sinharaja",
+                "Sinharaja ticket price",
+                "Sinharaja entrance fee",
+                "How much does Sinharaja cost",
+                "Sinharaja cost",
+                "price to enter Sinharaja",
+                "how much to visit Sinharaja"
+            ],
+            "responses": [
+                "Sinharaja entry fees are approximately USD 10 to 15 per person for foreign visitors. A mandatory local guide is required and costs around LKR 1500 to 2500 per group per day.",
+                "Entry to Sinharaja is around USD 10 to 15 for foreigners. You must hire a local guide at the entrance which is very helpful for spotting birds and wildlife. The guides are extremely knowledgeable about the forest."
+            ]
+        },
+        {
+            "tag": "sinharaja_best_time",
+            "patterns": [
+                "When is the best time to visit Sinharaja",
+                "Best season for Sinharaja",
+                "When should I go to Sinharaja",
+                "Sinharaja weather",
+                "when to visit Sinharaja",
+                "Sinharaja dry season",
+                "Sinharaja peak season"
+            ],
+            "responses": [
+                "The best time to visit Sinharaja is during the two dry spells from January to April and August to September. The forest is a rainforest so it is always humid and leeches are present but manageable in the drier months.",
+                "August to September and January to April offer the best conditions for trekking in Sinharaja. Avoid the heavy monsoon months of May to July and October to December when trails become very muddy and slippery."
+            ]
+        },
+        {
+            "tag": "sinharaja_activities",
+            "patterns": [
+                "What can I do in Sinharaja",
+                "Sinharaja activities",
+                "Sinharaja trekking",
+                "Things to do in Sinharaja",
+                "bird watching Sinharaja",
+                "Sinharaja hiking",
+                "Sinharaja experience",
+                "Sinharaja guided tour"
+            ],
+            "responses": [
+                "Sinharaja is best explored on guided trekking trails. Bird watching with a local guide is the highlight especially watching mixed species flocks in the early morning. Nature photography and researching endemic species are also popular.",
+                "Activities include guided forest treks, bird watching, butterfly and reptile spotting, and photography. The trails range from 2 hours to a full day. Staying overnight at a nearby guesthouse is recommended to catch the early morning bird activity."
+            ]
+        },
+        {
+            "tag": "best_park_leopards",
+            "patterns": [
+                "Which park is best for leopards",
+                "Where can I see leopards in Sri Lanka",
+                "best place to see leopards",
+                "leopard sighting Sri Lanka",
+                "where are the most leopards",
+                "leopard safari Sri Lanka"
+            ],
+            "responses": [
+                "Yala National Park has the highest density of leopards in the world and gives you the best chance of a sighting. Wilpattu is also excellent for leopards and is far less crowded than Yala.",
+                "For leopards Yala is the top choice due to its high leopard density. If you want a quieter experience Wilpattu is a great alternative where leopards are often spotted near the natural lakes called villus."
+            ]
+        },
+        {
+            "tag": "best_park_elephants",
+            "patterns": [
+                "Which park is best for elephants",
+                "Where can I see elephants in Sri Lanka",
+                "best place to see elephants",
+                "elephant safari Sri Lanka",
+                "where are the most elephants",
+                "elephant herd Sri Lanka",
+                "Where are the best places to see wild elephants in Sri Lanka?"
+            ],
+            "responses": [
+                "Udawalawe is the best park for elephants with almost guaranteed sightings of large herds. Minneriya is unmissable from August to October when the famous Gathering brings hundreds of elephants together at the reservoir.",
+                "For elephants visit Udawalawe for year round large herds, or Minneriya between August and October for the spectacular Gathering where up to 300 elephants congregate. Both are extraordinary experiences."
+            ]
+        },
+        {
+            "tag": "best_park_birds",
+            "patterns": [
+                "Which park is best for bird watching",
+                "Where can I see birds in Sri Lanka",
+                "best bird watching spot Sri Lanka",
+                "birding Sri Lanka",
+                "endemic birds Sri Lanka",
+                "where to see migratory birds Sri Lanka"
+            ],
+            "responses": [
+                "Sinharaja Forest Reserve is the best place for endemic birds with nearly all of Sri Lanka's endemic species present. Bundala is best for migratory water birds and flamingos from November to March.",
+                "For endemic birds Sinharaja is unbeatable. For sheer numbers of birds Bundala's wetlands are spectacular especially during the northern winter migration. Horton Plains is also excellent for highland endemic species."
+            ]
+        },
+        {
+            "tag": "safari_tips",
+            "patterns": [
+                "Safari tips Sri Lanka",
+                "Tips for visiting national parks",
+                "what should I know before safari",
+                "safari advice Sri Lanka",
+                "national park tips",
+                "how to do a safari in Sri Lanka",
+                "safari rules Sri Lanka"
+            ],
+            "responses": [
+                "Top safari tips: go early in the morning or late afternoon when animals are most active, stay quiet inside the jeep, wear neutral colored clothing, bring binoculars and a camera with a zoom lens, and always follow your tracker's instructions.",
+                "For a good safari experience book in advance especially for Yala during peak season, choose an experienced tracker, do not stand up in the jeep or make loud noises, and be patient. Wildlife sightings are never guaranteed but patience pays off."
+            ]
+        },
+        {
+            "tag": "what_to_bring",
+            "patterns": [
+                "What should I bring to a national park",
+                "What to pack for safari",
+                "safari packing list",
+                "what to wear on safari",
+                "what to bring to wildlife park",
+                "safari essentials",
+                "what do I need for a national park visit"
+            ],
+            "responses": [
+                "Bring sunscreen, insect repellent, a hat, sunglasses, comfortable neutral colored clothing, binoculars, a camera, plenty of water, and snacks. For Horton Plains and Sinharaja bring a light rain jacket and wear proper hiking shoes.",
+                "Essentials for any park visit: water, snacks, sunscreen, insect repellent, binoculars, and a good camera. Wear muted colors like khaki, brown or green. Avoid bright colors that may disturb wildlife. For Sinharaja tuck your trousers into your socks to keep leeches out."
+            ]
+        },
+        {
+            "tag": "conservation",
+            "patterns": [
+                "Wildlife conservation Sri Lanka",
+                "How is Sri Lanka protecting wildlife",
+                "endangered animals Sri Lanka",
+                "Sri Lanka wildlife threats",
+                "conservation efforts Sri Lanka",
+                "how to help Sri Lanka wildlife",
+                "threatened species Sri Lanka"
+            ],
+            "responses": [
+                "Sri Lanka is home to several endangered species including the Sri Lanka leopard, Asian elephant, and purple faced langur. The Department of Wildlife Conservation manages over 100 protected areas. Eco-tourism and responsible safari practices help support conservation efforts.",
+                "Sri Lanka's wildlife faces threats from habitat loss and human wildlife conflict. Organizations like the Department of Wildlife Conservation and local NGOs work to protect habitats. Visiting national parks responsibly and choosing ethical safari operators directly supports conservation."
+            ]
+        }
+    ]
+}

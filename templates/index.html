@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wild Lanka</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..700;1,300..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+<body>
+
+<div class="app-wrapper">
+
+  <!-- Top nav -->
+  <nav class="nav">
+    <div class="nav-brand">
+      <div class="nav-mark">🌿</div>
+      <span>WILD LANKA</span>
+    </div>
+    <div class="nav-status">
+      <div class="nav-dot"></div>
+      <span>AI guide online</span>
+    </div>
+  </nav>
+
+  <!-- Hero (initial landing view) -->
+  <section class="hero" id="hero">
+    <div class="hero-eyebrow">Sri Lanka Wildlife Guide</div>
+
+    <h1 class="hero-title">
+      Find the wild
+      
+      <span class="accent">that calls you.</span>
+    </h1>
+
+    <p class="hero-sub">
+      Ask anything about Sri Lanka's national parks. About wildlife, safari plans,
+      best seasons, ticket prices. Trained on seven of the country's protected wildernesses.
+    </p>
+
+    <!-- Hero search -->
+    <form class="hero-search" id="heroSearch" onsubmit="event.preventDefault(); sendFromHero();">
+      <svg class="hero-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input
+        type="text"
+        class="hero-search-input"
+        id="heroInput"
+        placeholder="Ask anything about Sri Lanka's wildlife..."
+        autocomplete="off"
+        autofocus
+      />
+      <button type="submit" class="hero-send-btn" aria-label="Send">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
+      </button>
+    </form>
+
+    <div class="you-may-ask">You may ask</div>
+
+    <div class="suggestion-grid">
+      <button class="suggestion-card" onclick="sendSuggestion('What animals can I spot in Yala National Park?')">
+        
+        <div class="suggestion-card-text">
+          <strong>Spot the elusive leopards</strong> in Yala, get a list of headline wildlife and seasonal highlights.
+        </div>
+        <div class="suggestion-card-cta">Ask this ></div>
+      </button>
+
+      <button class="suggestion-card" onclick="sendSuggestion('Where are the best places to see wild elephants in Sri Lanka?')">
+        
+        <div class="suggestion-card-text">
+          <strong>Find the elephant gathering</strong> across Udawalawe and Minneriya, when and where to go.
+        </div>
+        <div class="suggestion-card-cta">Ask this ></div>
+      </button>
+
+      <button class="suggestion-card" onclick="sendSuggestion('Best park for endemic bird watching in Sri Lanka')">
+        
+        <div class="suggestion-card-text">
+          <strong>Track endemic birds</strong> through Sinharaja's rainforest and Bundala's wetlands.
+        </div>
+        <div class="suggestion-card-cta">Ask this ></div>
+      </button>
+
+      <button class="suggestion-card" onclick="sendSuggestion('Plan a safari trip to Horton Plains, what should I bring?')">
+        
+        <div class="suggestion-card-text">
+          <strong>Plan a hike to World's End</strong> with safari tips, packing list, and best timings.
+        </div>
+        <div class="suggestion-card-cta">Ask this ></div>
+      </button>
+    </div>
+  </section>
+
+  <!-- Conversation view (shows after first message) -->
+  <section class="conversation" id="conversation">
+    <div class="chat-area" id="chatArea"></div>
+  </section>
+
+  <!-- Bottom input (shows during conversation) -->
+  <div class="bottom-input" id="bottomInput">
+    <form class="bottom-input-inner" onsubmit="event.preventDefault(); sendMessage();">
+      <svg class="hero-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input
+        type="text"
+        class="hero-search-input"
+        id="userInput"
+        placeholder="Ask another question..."
+        autocomplete="off"
+      />
+      <button type="submit" class="hero-send-btn" aria-label="Send">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
+      </button>
+    </form>
+  </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+
+</body>
+</html>
