@@ -3,6 +3,7 @@ import json
 import pickle
 import random
 import os
+import sys
 import subprocess
 from threading import Lock
 import numpy as np
@@ -12,14 +13,14 @@ from tensorflow.keras.models import load_model
 
 app = Flask(__name__)
 
-# ─── Constants ────────────────────────────────────────────────────────────────
+## Constants
 
 RETRAIN_THRESHOLD = 5    # retrain after every 5 corrections
 INTENTS_PATH = "data/intents.json"
 FEEDBACK_LOG_PATH = "data/feedback_log.json"
 MODEL_PATH = "models/chatbot_model_v1.h5"
 
-# ─── Globals ──────────────────────────────────────────────────────────────────
+##Globals
 
 stemmer = LancasterStemmer()
 training_lock = Lock()
@@ -31,7 +32,11 @@ words = None
 classes = None
 data = None
 
-# ─── Loading functions ────────────────────────────────────────────────────────
+# Immediate correction overrides: user_message.lower() → (tag, response)
+# Checked before the neural net so corrections take effect instantly.
+corrections_override = {}
+
+##Loading functions
 
 def load_chatbot():
     """Load (or reload) the model, vocabulary, classes and intents file."""
@@ -54,8 +59,7 @@ if not os.path.exists(FEEDBACK_LOG_PATH):
     with open(FEEDBACK_LOG_PATH, "w") as f:
         json.dump({"corrections": [], "reinforcements": []}, f, indent=4)
 
-# ─── Prediction helpers ───────────────────────────────────────────────────────
-
+##Prediction helpers
 def process_input(user_input):
     input_words = nltk.word_tokenize(user_input)
     input_words = [stemmer.stem(w.lower()) for w in input_words]
@@ -84,7 +88,7 @@ def get_response(intent_tag):
             return random.choice(intent["responses"])
     return "I'm not sure I understand. Could you rephrase that?"
 
-# ─── Feedback / learning helpers ──────────────────────────────────────────────
+##Feedback / learning helpers
 
 def add_pattern_to_intent(tag, new_pattern, new_response=None):
     """Append a new pattern (and optional response) to an existing tag,
@@ -125,15 +129,25 @@ def log_feedback(feedback_type, entry):
 def retrain_model():
     """Run modelV1.py and reload the chatbot."""
     global is_training
+    project_root = os.path.dirname(os.path.abspath(__file__))
     with training_lock:
         is_training = True
         print("Retraining started...")
-        subprocess.run(["python", "src/modelV1.py"], check=False)
-        load_chatbot()
+        result = subprocess.run(
+            [sys.executable, "src/modelV1.py"],
+            check=False,
+            capture_output=True,
+            text=True,
+            cwd=project_root
+        )
+        if result.returncode != 0:
+            print(f"Retraining failed:\n{result.stderr}")
+        else:
+            load_chatbot()
+            print("Retraining complete.")
         is_training = False
-        print("Retraining complete.")
 
-# ─── Routes ───────────────────────────────────────────────────────────────────
+## Routes
 
 @app.route("/")
 def index():
@@ -144,6 +158,16 @@ def chat():
     user_message = request.json.get("message", "")
     if not user_message.strip():
         return jsonify({"response": "Please type something.", "tag": None})
+
+    # Check immediate correction overrides before the neural net
+    override = corrections_override.get(user_message.lower().strip())
+    if override:
+        return jsonify({
+            "response": override[1],
+            "tag": override[0],
+            "user_message": user_message
+        })
+
     intent = predict_intent(user_message)
     response = get_response(intent)
     return jsonify({
@@ -171,7 +195,7 @@ def feedback():
 @app.route("/correct", methods=["POST"])
 def correct():
     """Handle thumbs-down correction feedback."""
-    global correction_counter
+    global correction_counter, data, corrections_override
     payload = request.json
     user_message = payload.get("user_message", "")
     correct_tag = payload.get("correct_tag", "").strip()
@@ -186,6 +210,21 @@ def correct():
         "correct_tag": correct_tag,
         "new_response": new_response
     })
+
+    # Reload intents immediately so get_response() sees the new data
+    with open(INTENTS_PATH) as f:
+        data = json.load(f)
+
+    # Build the response to store in the override
+    override_response = new_response
+    if not override_response:
+        for intent in data["intents"]:
+            if intent["tag"] == correct_tag and intent["responses"]:
+                override_response = random.choice(intent["responses"])
+                break
+
+    if override_response:
+        corrections_override[user_message.lower().strip()] = (correct_tag, override_response)
 
     correction_counter += 1
     retrained = False
@@ -210,7 +249,7 @@ def get_tags():
 def training_status():
     return jsonify({"is_training": is_training})
 
-# ─── Run ──────────────────────────────────────────────────────────────────────
+## Run
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)

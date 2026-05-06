@@ -146,7 +146,7 @@ function handleNotRight(fbContainer, botData) {
 
   const newResponseInput = document.createElement('textarea');
   newResponseInput.classList.add('correction-input');
-  newResponseInput.placeholder = 'Optional sample response';
+  newResponseInput.placeholder = 'What should the correct response be? (optional but recommended)';
   newResponseInput.style.display = 'none';
   newResponseInput.rows = 2;
   form.appendChild(newResponseInput);
@@ -154,7 +154,8 @@ function handleNotRight(fbContainer, botData) {
   select.onchange = () => {
     const isNew = select.value === '__new__';
     newTagInput.style.display = isNew ? 'block' : 'none';
-    newResponseInput.style.display = isNew ? 'block' : 'none';
+    // Show response input for ALL selections so the bot knows what to say
+    newResponseInput.style.display = select.value ? 'block' : 'none';
   };
 
   const submitBtn = document.createElement('button');
